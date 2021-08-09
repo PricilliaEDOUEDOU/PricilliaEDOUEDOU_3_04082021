@@ -12,7 +12,7 @@ $quinquenaire: #fff;
 
 body{
     width: 100%;
-    align-items: center;
+   /* align-items: center;*/
     display: flex;
     justify-content: center;
 }
@@ -121,10 +121,12 @@ a{
 
 h2, h3, p{
     font-family: roboto, sans-serif;
+    color: black;
 }
 
 h2{
     font-size: 30px;
+    color: black;
 }
 
 .bouton
@@ -134,7 +136,7 @@ h2{
     border-radius: 50px 50px 50px 50px;
     border: 1px solid;
     color: $quinquenaire;
-    background: linear-gradient(to top left, $primaire, $secondaire);  
+    background: linear-gradient(to top left, $primaire, $secondaire); 
 }
 
 header{
@@ -262,6 +264,7 @@ header .logo{
 }
 
 .jauge:hover .jauge_remplissage{
+
     height: 100%;
 }
 
@@ -285,6 +288,58 @@ header .logo{
     color: $quinquenaire;
 }
 
+.footer_bloc a{
+    color: $quinquenaire;
+}
+
+/*Pages de menu*/
+
+.image{
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu{
+    background-color: $quaternaire;
+    padding: 40px 10px 0 10px; 
+    border-radius: 30px 30px 0 0;
+    z-index: 1;
+    position: relative;
+    margin-top: -64px;
+}
+
+.parcourir
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 350px;
+    padding: 10px 0;
+}
+
+.parcourir_choix{
+    padding: 20px 0 10px 0;
+}
+
+.choix_menu{
+    background: $quinquenaire;
+    max-width: 100%;
+    padding: 10px 15px 20px 15px;
+    border-radius: 20px;
+    max-height: 70px;
+}
+
+.favoris p{
+    max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.price{
+    width: 20px;
+}
+   
 
 @media all and (min-width: 768px)
 {
@@ -308,6 +363,28 @@ header .logo{
         width: 45%;
         margin: 10px;
     }
+
+    .image{
+        height: 500px;
+    }
+
+    div .logo{
+        padding-left: 12px;
+    }
+
+    .footer_rubrique{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    .footer_bloc{
+       max-width: 35%;
+        padding: 20px 12px;
+    }
+
+   
 }
 
 @media all and (min-width: 1024px)
@@ -325,6 +402,7 @@ header .logo{
 
     .choice{
         display: flex;
+        justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -332,7 +410,7 @@ header .logo{
 
     .restaurant_choice
     {
-        width: 47%;
+        max-width: 47%;
         margin: 10px;
 
     }
@@ -341,10 +419,20 @@ header .logo{
         height: 175px;
     }
 
-    .wrapper{
-        max-width: 2600px;
+    .composition{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 400px;
+    }
+    
+    .parcourir{
+        width: 30%;
     }
 
-    
+    .image{
+        height: 800px;
+    }
 
 }
