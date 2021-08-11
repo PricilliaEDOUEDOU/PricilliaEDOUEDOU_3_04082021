@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  /* align-items: center;*/
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+/*.attente{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 200px;
+    height:200px;
+    background: transparent;
+    border:3px dashed $tertiaire;
+    border-radius:50%;
+    text-align: center;
+    line-height:150px;
+    font-family:shrikhand, sans-serif;
+    font-size:20px;
+    color: black;
+    letter-spacing:4px;
+    text-shadow:0 0 10px black;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+.attente:before
+{
+  content:'';
+  position:absolute;
+  top:-3px;
+  left:-3px;
+  width:100%;
+  height:100%;
+  border:3px solid transparent;
+  border-top:3px solid $primaire;
+  border-right:3px solid $secondaire;
+  border-radius:50%;
+  animation:animateC 2s linear infinite;
+}
+
+span
+{
+  display:block;
+  position:absolute;
+  top:calc(50% - 2px);
+  left:50%;
+  width:50%;
+  height:4px;
+  background:transparent;
+  transform-origin:left;
+  animation:animate 2s linear infinite;
+}
+
+span:before
+{
+  content:'';
+  position:absolute;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:linear-gradient($primaire, $secondaire);  
+  top:-6px;
+  right:-8px;
+  box-shadow:0 0 20px black;
+}
+
+@keyframes animateC
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
+}*/
+a {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: Shrikhand, sans-serif;
+}
+
+h2, h3, p {
+  font-family: roboto, sans-serif;
+  color: black;
+}
+
+h2 {
+  font-size: 30px;
+  color: black;
+}
+
+.bouton {
+  width: 210px;
+  height: 50px;
+  border-radius: 50px 50px 50px 50px;
+  border: 1px solid;
+  color: #fff;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+
+header {
+  height: 62px;
+  padding: 30px 0 20px 0;
+  align-items: center;
+}
+
+header .logo {
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.localisation {
+  height: 50px;
+  background-color: #eaeaea;
+  padding: 15px 0;
+  vertical-align: middle;
+  line-height: 50px;
+  text-align: center;
+}
+
+.choix {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 45px 20px 55px 20px;
+}
+
+.choix h3 {
+  padding: 20px 0 35px 0;
+}
+
+.fonctionnement {
+  background-color: #fff;
+  height: 440px;
+  padding: 50px 20px 0 20px;
+}
+
+.fonctionnement_bloc {
+  height: 275px;
+}
+
+.bloc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 20px 20px;
+  border: solid 1px #fff;
+  margin: 20px 0;
+}
+
+.number_bloc {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 25px;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  padding: 60px 20px 65px 20px;
+}
+
+.restaurant_choice {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px 20px 20px 20px;
+  border: solid 3px #f6f6f6;
+  margin: 18px 0;
+  box-shadow: 10px 10px 10px 10px #f6f6f6;
+}
+
+.restaurant_choice img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 175px;
+  border-radius: 20px 20px 0 0;
+}
+
+.info_restaurant {
+  background: #fff;
+  max-width: 100%;
+  padding: 20px 15px;
+  border-radius: 0 0 20px 20px;
+}
+
+.favoris {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favoris i {
+  font-size: 20px;
+}
+
+.jauge {
+  width: 15px;
+  height: 15px;
+  display: block;
+  background-color: #fff;
+  position: relative;
+}
+
+/*Remplissage de bas en haut*/
+.jauge_remplissage {
+  transition: all 0.3s linear 0s;
+  background-color: #FF79DA;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.jauge:hover .jauge_remplissage {
+  height: 100%;
+}
+
+.info_restaurant p {
+  padding-top: 15px;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 25px 20px 40px 20px;
+}
+
+.footer_bloc {
+  padding: 10px 0;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer_bloc a {
+  color: #fff;
+}
+
+/*Pages de menu*/
+.image {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 40px 10px 0 10px;
+  border-radius: 30px 30px 0 0;
+  z-index: 1;
+  position: relative;
+  margin-top: -64px;
+}
+
+.parcourir {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 350px;
+  padding: 10px 0;
+}
+
+.parcourir_choix {
+  padding: 20px 0 10px 0;
+}
+
+.choix_menu {
+  background: #fff;
+  max-width: 100%;
+  padding: 10px 15px 20px 15px;
+  border-radius: 20px;
+  max-height: 70px;
+}
+
+.favoris p {
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  width: 20px;
+}
+
+@media all and (min-width: 768px) {
+  .fonctionnement {
+    height: auto;
+  }
+
+  .fonctionnement_titre {
+    margin: 12px;
+  }
+
+  .fonctionnement_bloc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bloc {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .image {
+    height: 500px;
+  }
+
+  div .logo {
+    padding-left: 12px;
+  }
+
+  .footer_rubrique {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer_bloc {
+    max-width: 35%;
+    padding: 20px 12px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .fonctionnement {
+    height: 200px;
+  }
+
+  .fonctionnement_bloc {
+    flex-wrap: nowrap;
+  }
+
+  .choice {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .restaurant_choice {
+    max-width: 47%;
+    margin: 10px;
+  }
+
+  .restaurant_choice img {
+    height: 175px;
+  }
+
+  .composition {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 400px;
+  }
+
+  .parcourir {
+    width: 30%;
+  }
+
+  .image {
+    height: 800px;
+  }
+}/*# sourceMappingURL=style.css.map */
