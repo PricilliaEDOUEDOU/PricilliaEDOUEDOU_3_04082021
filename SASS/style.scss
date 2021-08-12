@@ -307,20 +307,39 @@ header .logo{
     z-index: 1;
     position: relative;
     margin-top: -64px;
+    height: 1200px;
 }
 
-.parcourir
-{
+.composition{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    height: 1100px;
+}/*ajouter le 12_08_2021 a 16h17*/
+
+.parcourir_1
+{
+    /*display: flex;
+    justify-content: space-between;
+    flex-direction: column;*/
     height: 350px;
-    padding: 10px 0;
+    padding: 20px 0;
+}
+
+.parcourir_2{
+    height: 255px;
+    padding: 20px 0;
+}
+
+.different_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
 }
 
 .parcourir_choix{
-    padding: 20px 0 10px 0;
-    align-items: flex-start;
+    padding: 20px 0;
 }
 
 .choix_menu{
