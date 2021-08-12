@@ -27,6 +27,7 @@ img{
     margin: 0 auto;
 }
 
+
 /*.attente{
     position:fixed;
     top:50%;
@@ -130,14 +131,21 @@ h2{
     color: black;
 }
 
-.bouton
-{
+.bouton{
     width: 210px;
     height: 50px;
     border-radius: 50px 50px 50px 50px;
     border: 1px solid;
     color: $quinquenaire;
     background: linear-gradient(to top left, $primaire, $secondaire); 
+    box-shadow: 3px 3px 3px #f5efef;
+    cursor: pointer;
+}
+
+.bouton:hover{
+    background-color: lighten(#9356dc, 10%);
+    background-blend-mode: lighten;
+    box-shadow: darken(#f5efef, 10%) 4px 4px 6px;/*4px 4px 6px #000*/
 }
 
 header{
@@ -153,6 +161,8 @@ header .logo{
 }
 
 .localisation{
+    display: flex; /*ajouter le 12_08_2021  pour center localisation*/
+    justify-content: center;/*ajouter le 12_08_2021*/
     height: 50px;
     background-color: #eaeaea;
     padding: 15px 0;
@@ -202,6 +212,9 @@ header .logo{
     border-radius: 50%;
     color: $quinquenaire;
     line-height: 25px;
+    position: relative;
+    right: 10px;
+
     
 
 }
@@ -253,21 +266,22 @@ header .logo{
     position: relative;
 }
 
-/*Remplissage de bas en haut*/
-.jauge_remplissage{
-    transition: all 0.3s linear 0s; 
-    background-color: $secondaire;
-    width: 100%;
-    height: 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.jauge:hover .jauge_remplissage{
-
-    height: 100%;
-}
+/*Remplissage du coeur*/
+.coeur {
+    color: black;
+    cursor: pointer;
+    &:hover {
+      animation: fill 0.3s ease-in-out;
+      display: inline-block;
+      opacity: 1;
+      background:linear-gradient(to top left, $primaire, $secondaire)/*(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da)*/;
+      background:-webkit-linear-gradient(to top left, $primaire, $secondaire)/*(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da)*/;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent; 
+      font-weight: bold;
+    }
+  }
 
 
 .info_restaurant p
@@ -398,9 +412,6 @@ header .logo{
         margin: 10px;
     }
 
-   /* .image{
-        height: 500px;
-    }*/
 
     div .logo{
         padding-left: 12px;

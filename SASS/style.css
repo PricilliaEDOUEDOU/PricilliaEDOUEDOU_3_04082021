@@ -129,6 +129,15 @@ h2 {
   border: 1px solid;
   color: #fff;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
+  box-shadow: 3px 3px 3px #f5efef;
+  cursor: pointer;
+}
+
+.bouton:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: #e1d0d0 4px 4px 6px;
+  /*4px 4px 6px #000*/
 }
 
 header {
@@ -144,6 +153,10 @@ header .logo {
 }
 
 .localisation {
+  display: flex;
+  /*ajouter le 12_08_2021  pour center localisation*/
+  justify-content: center;
+  /*ajouter le 12_08_2021*/
   height: 50px;
   background-color: #eaeaea;
   padding: 15px 0;
@@ -191,6 +204,8 @@ header .logo {
   border-radius: 50%;
   color: #fff;
   line-height: 25px;
+  position: relative;
+  right: 10px;
 }
 
 .restaurant {
@@ -241,19 +256,22 @@ header .logo {
   position: relative;
 }
 
-/*Remplissage de bas en haut*/
-.jauge_remplissage {
-  transition: all 0.3s linear 0s;
-  background-color: #FF79DA;
-  width: 100%;
-  height: 0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+/*Remplissage du coeur*/
+.coeur {
+  color: black;
+  cursor: pointer;
 }
-
-.jauge:hover .jauge_remplissage {
-  height: 100%;
+.coeur:hover {
+  -webkit-animation: fill 0.3s ease-in-out;
+          animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
 }
 
 .info_restaurant p {
@@ -378,9 +396,6 @@ header .logo {
     margin: 10px;
   }
 
-  /* .image{
-       height: 500px;
-   }*/
   div .logo {
     padding-left: 12px;
   }
