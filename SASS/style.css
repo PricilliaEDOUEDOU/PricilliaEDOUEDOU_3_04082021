@@ -13,6 +13,8 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wrapper {
@@ -110,7 +112,7 @@ a {
   font-family: Shrikhand, sans-serif;
 }
 
-h2, h3, p {
+h2, h3, h4, p {
   font-family: roboto, sans-serif;
   color: black;
 }
@@ -277,7 +279,8 @@ header .logo {
 
 /*Pages de menu*/
 .image {
-  height: 250px;
+  max-height: 80%;
+  /*250px*/
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -301,6 +304,7 @@ header .logo {
 
 .parcourir_choix {
   padding: 20px 0 10px 0;
+  align-items: flex-start;
 }
 
 .choix_menu {
@@ -309,19 +313,30 @@ header .logo {
   padding: 10px 15px 20px 15px;
   border-radius: 20px;
   max-height: 70px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.favoris p {
-  max-width: 240px;
+.cout h4, p {
+  max-width: 220px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .price {
-  width: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 10px;
+  font-weight: 700;
 }
 
+@media all and (min-width: 375px) {
+  .cout h4, p {
+    max-width: 270px;
+  }
+}
 @media all and (min-width: 768px) {
   .fonctionnement {
     height: auto;
@@ -343,12 +358,15 @@ header .logo {
     margin: 10px;
   }
 
-  .image {
-    height: 500px;
-  }
-
+  /* .image{
+       height: 500px;
+   }*/
   div .logo {
     padding-left: 12px;
+  }
+
+  .cout h4, p {
+    max-width: 100%;
   }
 
   .footer_rubrique {
@@ -399,7 +417,12 @@ header .logo {
     width: 30%;
   }
 
-  .image {
-    height: 800px;
+  /*.image{
+      height: 800px;
+  }*/
+}
+@media all and (width: 1024px) {
+  .cout h4, p {
+    max-width: 220px;
   }
 }/*# sourceMappingURL=style.css.map */
