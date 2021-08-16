@@ -12,10 +12,262 @@ $quinquenaire: #fff;
 
 body{
     width: 100%;
-   /* align-items: center;*/
+    align-items: center;
     display: flex;
     justify-content: center;
 }
+/*loader*/
+
+.loader {
+    /*background:linear-gradient(to left, $primaire, $secondaire);*/
+    background-color: $quinquenaire;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    font-family: Shrikhand, sans-serif;
+    font-size: x-large;
+    vertical-align: middle;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: loader 1s ease-in-out 3s forwards;
+}
+
+.nom {
+    vertical-align: middle;
+    position: absolute;
+    
+    top: 40%;
+    left: 20%;
+    /*left: 20%;*/
+}
+
+.nom span {
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    padding-right: 16px;
+    background: linear-gradient(to left,$primaire, $secondaire);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 15px;
+   /* animation: grow 1.2 linear infinite;*/
+
+}
+
+
+/*.lettre{
+background: linear-gradient(to left,$primaire, $secondaire);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;*
+color: #484848;
+font-size: 80px;
+letter-spacing: 15px;
+margin-bottom: 150px;
+animation: flash 1.2 linear infinite;*
+}*/
+
+.loader_circle {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: -60%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    //overflow: hidden;
+    box-shadow: 0 0 5px transparent;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(transparent, $tertiaire);
+      animation: spin .5s infinite linear;
+    }
+    /*&:after {
+      content: "";
+      position: absolute;
+      width: 95%;
+      height: 95%;
+      top: 2.5%;
+      left: 2.5%;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: inset 0 0 5px #444;
+    }*/
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/*.loader_fork {
+vertical-align: middle;
+position: absolute;
+top:50%;
+left: 50%;
+animation: rotate 1s linear infinite;
+}*/
+.nom span:nth-child(1) {
+    animation-delay: grow 0.2s;
+    /*animation: grow 1s ease-in-out infinite;*/
+  }
+  .nom span:nth-child(2) {
+    /*animation: grow 1s ease-in-out 0.15s infinite;*/
+    animation-delay: grow 0.4s;
+  }
+  .nom span:nth-child(3) {
+   /* animation: grow 1s ease-in-out 0.15s infinite;*/
+    animation-delay: grow 0.6s;
+  }
+  .nom span:nth-child(4) {
+    /*animation: grow 1s ease-in-out 0.15s infinite;*/
+    animation-delay: grow 0.8s;
+  }
+  .nom span:nth-child(5) {
+   /* animation: grow 1s ease-in-out 0.15s infinite;*/
+    animation-delay: grow 0.10s;
+  }
+  .nom span:nth-child(6) {
+   /* animation: grow 1s ease-in-out 0.15s infinite;*/
+    animation-delay: grow 0.12s;
+  }
+  .nom span:nth-child(7) {
+    /*animation: grow 1s ease-in-out 0.15s infinite;*/
+    animation-delay: grow 0.14s;
+  }
+  .nom span:nth-child(8) {
+    /*animation: grow 1s ease-in-out 0.15s infinite;*/
+    animation-delay: grow 0.16s;
+  }
+  
+
+  @keyframes grow {
+    0%, 100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+    50% {
+      -webkit-transform: scaleY(1.8);
+      transform: scaleY(1.8);
+    }
+  }
+  @keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  /*@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fill {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }*/
+  
+/*.loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background: $quinquenaire;*
+    background: $quinquenaire/*#000*;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lettre{
+/*background: linear-gradient(to left,$primaire, $secondaire);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;*
+color: #484848;
+font-size: 80px;
+letter-spacing: 15px;
+margin-bottom: 150px;
+animation: flash 1.2 linear infinite;
+}
+
+@keyframes flash{
+    0% {
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900;
+    }
+    90%{
+        color: #484848;
+      /*background: linear-gradient(to left,$primaire, $secondaire);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;*
+        text-shadow: none;
+    }
+    100%{
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900;
+    }
+}
+
+.lettre:nth-child(1){
+    animation-delay: 0,1s;
+}
+.lettre:nth-child(2){
+    animation-delay: 0,2s;
+}
+.lettre:nth-child(3){
+    animation-delay: 0,3s;
+}
+.lettre:nth-child(4){
+    animation-delay: 0,4s;
+}
+.lettre:nth-child(5){
+    animation-delay: 0,5s;
+}
+.lettre:nth-child(6){
+    animation-delay: 0,6s;
+}
+.lettre:nth-child(7){
+    animation-delay: 0,7s;
+}
+.lettre:nth-child(8){
+    animation-delay: 0,8s;
+}*/
+
 
 img{
     max-width: 100%;
@@ -26,6 +278,8 @@ img{
 .wrapper{
     margin: 0 auto;
 }
+
+
 
 
 /*.attente{
@@ -214,9 +468,6 @@ header .logo{
     line-height: 25px;
     position: relative;
     right: 10px;
-
-    
-
 }
 
 .restaurant{
@@ -258,14 +509,6 @@ header .logo{
     font-size: 20px;
 }
 
-.jauge{
-    width: 15px;
-    height: 15px;
-    display: block;
-    background-color: $quinquenaire;
-    position: relative;
-}
-
 /*Remplissage du coeur*/
 .coeur {
     color: black;
@@ -274,8 +517,8 @@ header .logo{
       animation: fill 0.3s ease-in-out;
       display: inline-block;
       opacity: 1;
-      background:linear-gradient(to top left, $primaire, $secondaire)/*(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da)*/;
-      background:-webkit-linear-gradient(to top left, $primaire, $secondaire)/*(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da)*/;
+      background:linear-gradient(to top left, $primaire, $secondaire);
+      background:-webkit-linear-gradient(to top left, $primaire, $secondaire);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent; 
@@ -338,6 +581,8 @@ header .logo{
     flex-direction: column;*/
     height: 350px;
     padding: 20px 0;
+    border-bottom: $tertiaire;
+    border-width: 3px;
 }
 
 .parcourir_2{
@@ -364,8 +609,98 @@ header .logo{
     max-height: 70px;
     display: flex;
     justify-content: space-between;
-   
+    overflow: hidden;
+    cursor: pointer;
+    animation: apparence 0.6s;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    animation-fill-mode: both;
+    transform: scale(0);
 }
+
+.delai_0{
+    animation-delay: 0s;
+}
+
+.delai_1{
+    animation-delay: 0.1s;
+
+}
+.delai_2{
+    animation-delay: 0.2s;
+}
+
+.delai_3{
+    animation-delay: 0.3s;
+}
+
+.delai_4{
+    animation-delay: 0.4s;
+}
+
+.delai_5{
+    animation-delay: 0.5s;
+}
+
+.delai_6{
+    animation-delay: 0.6s;
+}
+
+.delai_7{
+    animation-delay: 0.7s;
+}
+
+.delai_8{
+    animation-delay: 0.8s;
+}
+
+@keyframes apparence {
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/*.vignets {
+    
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox *
+    -webkit-animation: fadein 2s; /* Safari et Chrome *
+    -o-animation: fadein 2s; /* Opera *
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox *
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome *
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera *
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}*/
+
 
 .cout h4, p{
     max-width: 220px;
@@ -380,6 +715,41 @@ header .logo{
     padding: 0 10px;
     font-weight: 700;
 }
+
+/*.coche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $tertiaire;
+    width: 50px;
+    max-height: 70px;/*63px*
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: absolute;
+    padding: 20px;
+    right: -50px;
+    top: 0;
+    opacity: 0;
+    transition: transform 330ms ease-in-out;
+}
+.coche .fa-check-circle {
+    color: #fff;
+    transition: transform 500ms ease-in-out;
+}
+
+.choix_menu:hover .coche{
+    opacity: 1;
+    transform: translate(-50px);
+}
+.choix_menu:hover .fa-check-circle{
+    transform: rotate(360deg);
+}*/
+  
+  /*.line {
+    width: 40px;
+    border: 2px solid $color-tertiary;
+    margin-left: 10px;
+  }*/
 
 @media all and (min-width: 375px)
 {
