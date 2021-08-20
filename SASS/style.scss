@@ -484,6 +484,7 @@ header .logo{
     border: solid 3px $quaternaire;
     margin: 18px 0;
     box-shadow: 10px 10px 10px 10px $quaternaire;
+    position: relative;
 }
 
 .restaurant_choice img{
@@ -492,6 +493,18 @@ header .logo{
     height: 175px;
     border-radius: 20px 20px 0 0;
 }
+.new{
+    background-color: $tertiaire;
+    color: #2c9c81;
+    padding: 4px 10px;
+    border-radius: 2px;
+    position: absolute;
+    left: 65%;
+    top: 5%;
+   
+
+}
+   
 
 .info_restaurant{
     background: $quinquenaire;
@@ -576,17 +589,20 @@ header .logo{
 
 .parcourir_1
 {
-    /*display: flex;
+    display: flex;
     justify-content: space-between;
-    flex-direction: column;*/
-    height: 350px;
+    flex-direction: column;
+    height: 370px;
     padding: 20px 0;
     border-bottom: $tertiaire;
     border-width: 3px;
 }
 
 .parcourir_2{
-    height: 255px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 290px;
     padding: 20px 0;
 }
 
@@ -595,6 +611,8 @@ header .logo{
     flex-direction: column;
     justify-content: space-between;
     height: inherit;
+    overflow: hidden;
+
 }
 
 .parcourir_choix{
@@ -854,6 +872,12 @@ header .logo{
         height: 800px;
     }*/
 
+}
+
+
+.menu{
+    
+    height: auto;
 }
 
 @media all and (width: 1024px)
