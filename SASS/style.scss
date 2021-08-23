@@ -372,6 +372,7 @@ a{
 
 .logo{
     font-family: Shrikhand, sans-serif;
+    position: relative;
     
 }
 
@@ -383,6 +384,11 @@ h2, h3, h4, p{
 h2{
     font-size: 30px;
     color: black;
+}
+
+.icone{
+    color: black;
+
 }
 
 .bouton{
@@ -448,17 +454,20 @@ header .logo{
 .bloc{
     display: flex;
     justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 80px;
     background-color: $quaternaire;
     border-radius: 20px 20px 20px 20px;
     border: solid 1px $quinquenaire;
     margin: 20px 0;
+    position: relative;
 
 }
 
-.number_bloc
+.bloc_number
 {
+    position: relative;
     width: 25px;
     height: 25px;
     text-align: center;
@@ -466,8 +475,36 @@ header .logo{
     border-radius: 50%;
     color: $quinquenaire;
     line-height: 25px;
-    position: relative;
     right: 10px;
+    margin: 30px 0;
+}
+
+.boc p{
+    margin: 30px 10px;
+
+}
+
+.bloc:hover{
+    background: #f2eafb;
+}
+
+.bloc:hover .fas{
+    color: $primaire;
+}
+
+
+/*.bloc_information{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}*/
+
+.fa-mobile-alt, .fa-list, .fa-store{
+    position: relative;
+    right: 5px;
+    margin: 30px 10px;
+
 }
 
 .restaurant{
@@ -501,7 +538,6 @@ header .logo{
     position: absolute;
     left: 65%;
     top: 5%;
-   
 
 }
    
@@ -524,7 +560,7 @@ header .logo{
 
 /*Remplissage du coeur*/
 .coeur {
-    color: black;
+    /*color: black;*/
     cursor: pointer;
     &:hover {
       animation: fill 0.3s ease-in-out;
@@ -555,6 +591,9 @@ header .logo{
     padding: 10px 0;
 }
 
+.footer h2{
+    color: $quinquenaire;
+}
 .footer p{
     color: $quinquenaire;
 }
@@ -564,6 +603,11 @@ header .logo{
 }
 
 /*Pages de menu*/
+
+.before{
+    position: absolute;
+    left: 10px;
+}
 
 .image{
     max-height: 80%; /*250px*/
@@ -577,7 +621,7 @@ header .logo{
     z-index: 1;
     position: relative;
     margin-top: -64px;
-    height: 1200px;
+    /*height: 1200px;*/
 }
 
 .composition{
@@ -585,7 +629,7 @@ header .logo{
     justify-content: space-between;
     flex-direction: column;
     height: 1100px;
-}/*ajouter le 12_08_2021 a 16h17*/
+}
 
 .parcourir_1
 {
@@ -606,13 +650,28 @@ header .logo{
     padding: 20px 0;
 }
 
+.parcourir_choix{
+    position: relative;
+    padding-bottom: 8px;
+    /*font-weight: normal;*/
+}
+
+.parcourir_choix::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: $tertiaire;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+  }
+
 .different_menu{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: inherit;
     overflow: hidden;
-
 }
 
 .parcourir_choix{
@@ -627,6 +686,7 @@ header .logo{
     max-height: 70px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     overflow: hidden;
     cursor: pointer;
     animation: apparence 0.6s;
@@ -732,24 +792,28 @@ header .logo{
     align-items: flex-end;
     padding: 0 10px;
     font-weight: 700;
+    
 }
 
-/*.coche {
+.coche {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $tertiaire;
-    width: 50px;
-    max-height: 70px;/*63px*
+    width: 10px;
+    max-height: 70px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     position: absolute;
-    padding: 20px;
+    padding: 18px;
     right: -50px;
     top: 0;
     opacity: 0;
     transition: transform 330ms ease-in-out;
+
 }
+
+/*animation coche*/
 .coche .fa-check-circle {
     color: #fff;
     transition: transform 500ms ease-in-out;
@@ -761,13 +825,9 @@ header .logo{
 }
 .choix_menu:hover .fa-check-circle{
     transform: rotate(360deg);
-}*/
-  
-  /*.line {
-    width: 40px;
-    border: 2px solid $color-tertiary;
-    margin-left: 10px;
-  }*/
+}
+
+/*Responsive*/
 
 @media all and (min-width: 375px)
 {

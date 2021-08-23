@@ -401,6 +401,7 @@ a {
 
 .logo {
   font-family: Shrikhand, sans-serif;
+  position: relative;
 }
 
 h2, h3, h4, p {
@@ -410,6 +411,10 @@ h2, h3, h4, p {
 
 h2 {
   font-size: 30px;
+  color: black;
+}
+
+.icone {
   color: black;
 }
 
@@ -479,15 +484,18 @@ header .logo {
 .bloc {
   display: flex;
   justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 80px;
   background-color: #f6f6f6;
   border-radius: 20px 20px 20px 20px;
   border: solid 1px #fff;
   margin: 20px 0;
+  position: relative;
 }
 
-.number_bloc {
+.bloc_number {
+  position: relative;
   width: 25px;
   height: 25px;
   text-align: center;
@@ -495,8 +503,32 @@ header .logo {
   border-radius: 50%;
   color: #fff;
   line-height: 25px;
-  position: relative;
   right: 10px;
+  margin: 30px 0;
+}
+
+.boc p {
+  margin: 30px 10px;
+}
+
+.bloc:hover {
+  background: #f2eafb;
+}
+
+.bloc:hover .fas {
+  color: #9356DC;
+}
+
+/*.bloc_information{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}*/
+.fa-mobile-alt, .fa-list, .fa-store {
+  position: relative;
+  right: 5px;
+  margin: 30px 10px;
 }
 
 .restaurant {
@@ -552,7 +584,7 @@ header .logo {
 
 /*Remplissage du coeur*/
 .coeur {
-  color: black;
+  /*color: black;*/
   cursor: pointer;
 }
 .coeur:hover {
@@ -581,6 +613,10 @@ header .logo {
   padding: 10px 0;
 }
 
+.footer h2 {
+  color: #fff;
+}
+
 .footer p {
   color: #fff;
 }
@@ -590,6 +626,11 @@ header .logo {
 }
 
 /*Pages de menu*/
+.before {
+  position: absolute;
+  left: 10px;
+}
+
 .image {
   max-height: 80%;
   /*250px*/
@@ -604,7 +645,7 @@ header .logo {
   z-index: 1;
   position: relative;
   margin-top: -64px;
-  height: 1200px;
+  /*height: 1200px;*/
 }
 
 .composition {
@@ -614,7 +655,6 @@ header .logo {
   height: 1100px;
 }
 
-/*ajouter le 12_08_2021 a 16h17*/
 .parcourir_1 {
   display: flex;
   justify-content: space-between;
@@ -631,6 +671,22 @@ header .logo {
   flex-direction: column;
   height: 290px;
   padding: 20px 0;
+}
+
+.parcourir_choix {
+  position: relative;
+  padding-bottom: 8px;
+  /*font-weight: normal;*/
+}
+
+.parcourir_choix::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
 }
 
 .different_menu {
@@ -653,6 +709,7 @@ header .logo {
   max-height: 70px;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   overflow: hidden;
   cursor: pointer;
   -webkit-animation: apparence 0.6s;
@@ -780,39 +837,39 @@ header .logo {
   font-weight: 700;
 }
 
-/*.coche {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $tertiaire;
-    width: 50px;
-    max-height: 70px;/*63px*
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    position: absolute;
-    padding: 20px;
-    right: -50px;
-    top: 0;
-    opacity: 0;
-    transition: transform 330ms ease-in-out;
-}
-.coche .fa-check-circle {
-    color: #fff;
-    transition: transform 500ms ease-in-out;
+.coche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 10px;
+  max-height: 70px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 18px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
 }
 
-.choix_menu:hover .coche{
-    opacity: 1;
-    transform: translate(-50px);
+/*animation coche*/
+.coche .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
 }
-.choix_menu:hover .fa-check-circle{
-    transform: rotate(360deg);
-}*/
-/*.line {
-  width: 40px;
-  border: 2px solid $color-tertiary;
-  margin-left: 10px;
-}*/
+
+.choix_menu:hover .coche {
+  opacity: 1;
+  transform: translate(-50px);
+}
+
+.choix_menu:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+
+/*Responsive*/
 @media all and (min-width: 375px) {
   .cout h4, p {
     max-width: 270px;
