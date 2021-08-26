@@ -358,6 +358,28 @@ header .logo {
   top: 5%;
 }
 
+.clignote {
+  -webkit-animation: clignote 0.5s linear infinite;
+          animation: clignote 0.5s linear infinite;
+}
+
+@-webkit-keyframes clignote {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clignote {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .info_restaurant {
   background: #fff;
   max-width: 100%;
@@ -436,14 +458,12 @@ header .logo {
   z-index: 1;
   position: relative;
   margin-top: -64px;
-  /*height: 1200px;*/
 }
 
 .composition {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 1100px;
 }
 
 .parcourir_1 {
@@ -467,7 +487,6 @@ header .logo {
 .parcourir_choix {
   position: relative;
   padding-bottom: 8px;
-  /*font-weight: normal;*/
 }
 
 .parcourir_choix::after {
@@ -493,25 +512,202 @@ header .logo {
 }
 
 .choix_menu {
-  background: #fff;
-  max-width: 100%;
-  padding: 10px 15px 20px 15px;
-  border-radius: 20px;
-  max-height: 70px;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
   cursor: pointer;
-  -webkit-animation: apparence 0.6s;
-          animation: apparence 0.6s;
-  -webkit-animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-          animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  transform: scale(0);
+  box-shadow: 0 5px 15px 0 #c3c3c3;
+  flex: 1 0 33%;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 70px;
+  -webkit-animation: apparence 0.5s;
+          animation: apparence 0.5s;
 }
 
+.choix_menu:hover {
+  box-shadow: 0 5px 15px 0 #9d9d9d;
+}
+
+.choix_menu .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: right;
+}
+
+.choix_menu .coche {
+  display: none;
+  width: 30%;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.choix_menu .fa-check-circle {
+  font-size: 24px;
+  color: #fff;
+  /*transform: rotate(360deg);*/
+}
+
+.choix_menu:hover .price {
+  -webkit-animation: coche-contain ease 0.3s;
+          animation: coche-contain ease 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  min-width: 50px;
+}
+
+.choix_menu:hover .coche {
+  display: block;
+  flex: 0 0 15%;
+  background: #99e2d0;
+  max-width: 50px;
+  overflow: hidden;
+  -webkit-animation: coche ease 0.3s;
+          animation: coche ease 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+.choix_menu:hover .fa-check-circle {
+  position: absolute;
+  left: 27%;
+  top: 30%;
+  background: #99e2d0;
+  -webkit-animation: valide ease 0.5s 1;
+          animation: valide ease 0.5s 1;
+}
+
+.cout, h4, p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 218px;
+}
+
+.cout {
+  width: 80%;
+  padding: 10px;
+}
+
+/*Animation de l'icone validation */
+@-webkit-keyframes valide {
+  0% {
+    transform: rotade(-90deg);
+  }
+  20% {
+    transform: rotade(-75deg) scale(1.03);
+  }
+  40% {
+    transform: rotade(-60deg) scale(1.08);
+  }
+  60% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  80% {
+    transform: rotade(-30deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(5deg) scale(1);
+  }
+}
+@keyframes valide {
+  0% {
+    transform: rotade(-90deg);
+  }
+  20% {
+    transform: rotade(-75deg) scale(1.03);
+  }
+  40% {
+    transform: rotade(-60deg) scale(1.08);
+  }
+  60% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  80% {
+    transform: rotade(-30deg) scale(1.08);
+  }
+  100% {
+    transform: rotate(5deg) scale(1);
+  }
+}
+/*Animation du checkbox */
+@-webkit-keyframes coche {
+  0% {
+    transform: translate(50px, 0);
+  }
+  20% {
+    transform: translate(30px, 0);
+  }
+  40% {
+    transform: translate(20px, 0);
+  }
+  60% {
+    transform: translate(15px, 0);
+  }
+  80% {
+    transform: translate(7px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@keyframes coche {
+  0% {
+    transform: translate(50px, 0);
+  }
+  20% {
+    transform: translate(30px, 0);
+  }
+  40% {
+    transform: translate(20px, 0);
+  }
+  60% {
+    transform: translate(15px, 0);
+  }
+  80% {
+    transform: translate(7px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@-webkit-keyframes coche-contain {
+  0% {
+    transform: translate(50px, 0);
+  }
+  40% {
+    transform: translate(25px, 0);
+  }
+  70% {
+    transform: translate(12px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@keyframes coche-contain {
+  0% {
+    transform: translate(50px, 0);
+  }
+  40% {
+    transform: translate(25px, 0);
+  }
+  70% {
+    transform: translate(12px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
 .delai_0 {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
@@ -574,57 +770,23 @@ header .logo {
     transform: scale(1);
   }
 }
-.cout h4, p {
-  max-width: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.price {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 0 10px;
-  font-weight: 700;
-}
-
-.coche {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  width: 10px;
-  max-height: 70px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  position: absolute;
-  padding: 18px;
-  right: -50px;
-  top: 0;
-  opacity: 0;
-  transition: transform 330ms ease-in-out;
-}
-
-/*animation coche*/
-.coche .fa-check-circle {
-  color: #fff;
-  transition: transform 500ms ease-in-out;
-}
-
-.choix_menu:hover .coche {
-  opacity: 1;
-  transform: translate(-50px);
-}
-
-.choix_menu:hover .fa-check-circle {
-  transform: rotate(360deg);
-}
-
 /*Responsive*/
 @media all and (min-width: 375px) {
-  .cout h4, p {
-    max-width: 270px;
+  .cout, h4, p {
+    max-width: 260px;
+  }
+
+  .new {
+    left: 70%;
+  }
+}
+@media all and (min-width: 425px) {
+  .new {
+    left: 75%;
+  }
+
+  .cout, h4, p {
+    max-width: 300px;
   }
 }
 @media all and (min-width: 768px) {
@@ -653,7 +815,11 @@ header .logo {
   }
 
   .cout h4, p {
-    max-width: 100%;
+    width: 100%;
+  }
+
+  .new {
+    left: 87%;
   }
 
   .footer_rubrique {
@@ -692,6 +858,10 @@ header .logo {
     height: 175px;
   }
 
+  .new {
+    left: 80%;
+  }
+
   .composition {
     display: flex;
     justify-content: space-between;
@@ -703,13 +873,25 @@ header .logo {
   .parcourir {
     width: 30%;
   }
-}
-.menu {
-  height: auto;
-}
 
-@media all and (width: 1024px) {
   .cout h4, p {
     max-width: 220px;
+  }
+}
+/*.menu{
+
+    height: auto;
+}*/
+@media all and (min-width: 1440px) {
+  .new {
+    left: 85%;
+  }
+
+  .parcourir_1 {
+    width: 450px;
+  }
+
+  .parcourir_2 {
+    width: 450px;
   }
 }/*# sourceMappingURL=style.css.map */
