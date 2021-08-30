@@ -301,7 +301,7 @@ header .logo{
 }
 
 .restaurant_choice img{
-    width: 100%;
+    width: 335px;
     object-fit: cover;
     height: 175px;
     border-radius: 20px 20px 0 0;
@@ -664,6 +664,9 @@ header .logo{
 }
 
 @media all and (min-width: 425px){
+    .restaurant_choice img{
+        width: 380px;
+    }
     .new{
         left: 75%;
         
@@ -705,6 +708,10 @@ header .logo{
 
     .cout h4, p{
         width: 100%;
+    }
+
+    .restaurant_choice img{
+        width: 748px;
     }
 
     .new{
