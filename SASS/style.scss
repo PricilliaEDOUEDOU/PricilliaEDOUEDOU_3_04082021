@@ -16,7 +16,48 @@ body{
     display: flex;
     justify-content: center;
 }
-/*loader*/
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1{
+    font-family: Shrikhand, sans-serif;
+    font-size: 25px;
+}
+
+h2,h3, h4, p{
+    font-family: roboto, sans-serif;
+    color: black;
+}
+
+h2{
+    font-weight: bold ;
+}
+
+h3,h4{
+    font-weight: 500;
+}
+
+p{
+    font-weight: 100;
+}
+
+
+.icone{
+    color: black;
+
+}
+
+
+
+/*loader spinner*/
 
 .container{
     
@@ -137,20 +178,22 @@ body{
     }
 }
 
-
-img{
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 .wrapper{
     margin: 0 auto;
 }
 
+header{
+    height: 62px;
+    padding: 30px 0 20px 0; 
+    align-items: center;
+    
+}
 
-a{
-    text-decoration: none;
+header .logo{
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+   
 }
 
 .logo{
@@ -159,34 +202,6 @@ a{
     
 }
 
-
-h1{
-    font-family: Shrikhand, sans-serif;
-    font-size: 25px;
-}
-
-h2,h3, h4, p{
-    font-family: roboto, sans-serif;
-    color: black;
-}
-
-h2{
-    font-weight: bold ;
-}
-
-h3,h4{
-    font-weight: 500;
-}
-
-p{
-    font-weight: 100;
-}
-
-
-.icone{
-    color: black;
-
-}
 
 .bouton{
     width: 210px;
@@ -206,22 +221,7 @@ p{
     box-shadow: darken(#f5efef, 10%) 4px 4px 6px;
 }
 
-header{
-    height: 62px;
-    padding: 30px 0 20px 0; 
-    align-items: center;
-    
-}
 
-
-
-header .logo{
-    text-align: center;
-    line-height: 50px;
-    vertical-align: middle;
-    
-   
-}
 
 .localisation{
     display: flex;
@@ -234,14 +234,14 @@ header .logo{
     text-align: center;
 }
 
-.choix{
+.explorer{
     text-align: center;
     background-color: $quaternaire; 
     padding: 45px 20px 55px 20px;
     
 }
 
-.choix p{
+.explorer p{
     padding: 20px 0 35px 0;
     white-space: normal;
     max-width: 100%;
@@ -253,11 +253,11 @@ header .logo{
     padding: 50px 20px 0 20px;
 }
 
-.fonctionnement_bloc{
+.fonctionnement__etape{
     height: 275px;    
 }
 
-.bloc{
+.etape{
     display: flex;
     justify-content: space-between;
     justify-content: flex-start;
@@ -271,7 +271,7 @@ header .logo{
 
 }
 
-.bloc_number
+.etape__nombre
 {
     position: relative;
     width: 25px;
@@ -285,16 +285,16 @@ header .logo{
     margin: 30px 0;
 }
 
-.boc p{
+/*.boc p{
     margin: 30px 10px;
 
-}
+}*/
 
-.bloc:hover{
+.etape:hover{
     background: #f2eafb;
 }
 
-.bloc:hover .fas{
+.etape:hover .fas{
     color: $primaire;
 }
 
@@ -311,7 +311,7 @@ header .logo{
     padding: 60px 20px 65px 20px;
 }
 
-.restaurant_choice{
+.restaurant__nom/*restaurant_choice*/{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -323,13 +323,13 @@ header .logo{
     position: relative;
 }
 
-.restaurant_choice img{
+.restaurant__nom img{
     width: 335px;
     object-fit: cover;
     height: 175px;
     border-radius: 20px 20px 0 0;
 }
-.new{
+.restaurant__nouveau/*new*/{
     background-color: $tertiaire;
     color: #2c9c81;
     padding: 4px 10px;
@@ -352,20 +352,20 @@ header .logo{
       }
   }
 
-.info_restaurant{
+.restaurant__info/*info_restaurant*/{
     background: $quinquenaire;
     max-width: 100%;
     padding: 20px 15px;
     border-radius: 0 0 20px 20px;
 }
 
-.favoris{
+.restaurant__appreciation/*favoris*/{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.favoris i{
+.restaurant__appreciation i{
     font-size: 20px;
 }
 
@@ -386,7 +386,7 @@ header .logo{
   }
 
 
-.info_restaurant p
+.restaurant__info p
 {
     padding-top: 15px;
 }
@@ -396,7 +396,7 @@ header .logo{
     padding: 25px 20px 40px 20px;
 }
 
-.footer_bloc
+.footer__bloc
 {
     padding: 10px 0;
 }
@@ -408,7 +408,7 @@ header .logo{
     color: $quinquenaire;
 }
 
-.footer_bloc a{
+.footer__bloc a{
     color: $quinquenaire;
 }
 
@@ -440,7 +440,7 @@ header .logo{
     flex-direction: column;
 }
 
-.parcourir_1
+.composition__parcourir_1 /*parcourir_1*/
 {
     display: flex;
     justify-content: space-between;
@@ -451,7 +451,7 @@ header .logo{
     border-width: 3px;
 }
 
-.parcourir_2{
+.composition__parcourir_2{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -460,13 +460,13 @@ header .logo{
 
 }
 
-.parcourir_choix{
+.composition__titre/*parcourir_choix*/{
     position: relative;
     padding-bottom: 8px;
-    
+    padding: 20px 0;
 }
 
-.parcourir_choix::after {
+.composition__titre:after {
     content: "";
     width: 50px;
     height: 4px;
@@ -476,7 +476,7 @@ header .logo{
     bottom: 10px;
   }
 
-.different_menu{
+.composition__bloc/*different_menu*/{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -485,11 +485,11 @@ header .logo{
  
 }
 
-.parcourir_choix{
-    padding: 20px 0;
-}
+/*.composition__titre/*parcourir_choix*{
+    padding: 20px 0; répétition plus haut
+}*/
 
-.choix_menu{
+.composition__choix/*choix_menu*/{
     display: flex;
     justify-content: space-between;
     background: #fff;
@@ -503,38 +503,39 @@ header .logo{
     animation: apparence 0.5s;
 
   }
-  .choix_menu:hover {
+  .composition__choix:hover {
     box-shadow: 0 5px 15px 0 #9d9d9d;
   }
-  .choix_menu .price{
+  .composition__menu--price/*choix_menu .price*/{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
     padding: 10px;
     text-align: right;
+    font-weight: bold;
   }
-  .choix_menu .coche{
+  .composition__menu--coche/*choix_menu .coche*/{
     display: none;
     width: 30%;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
   }
 
-  .choix_menu .fa-check-circle{
+  /*choix_menu*/ .fa-check-circle{
     font-size: 24px;
     color: $quinquenaire;
     /*transform: rotate(360deg);*/
   }
   
-  .choix_menu:hover .price{
+  .composition__choix/*choix_menu*/:hover .composition__menu--price/*.price*/{
     animation: coche-contain ease 0.3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     min-width: 50px;
   }
   
-  .choix_menu:hover .coche{
+  .composition__choix:hover .composition__menu--coche{
     display: block;
     flex: 0 0 15%;
     background: #99e2d0;
@@ -547,7 +548,7 @@ header .logo{
     
   }
   
-  .choix_menu:hover .fa-check-circle {
+  .composition__choix:hover .fa-check-circle {
     position: absolute;
     left: 27%;
     top: 30%;
@@ -555,14 +556,14 @@ header .logo{
     animation: valide ease 0.5s 1;
   }
 
-  .cout, h4, p{
+  .composition__menu, h4, p{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     max-width: 218px
   }
   
-  .cout{
+  .composition__menu{
     width: 80%;
     padding: 10px;
   }
@@ -676,11 +677,11 @@ header .logo{
 
 @media all and (min-width: 375px)
 {
-    .cout, h4, p{
+    .composition__menu, h4, p{
         max-width: 260px;
     }
 
-    .new{
+    .restaurant__nouveau{
         left: 70%;
         
     }
@@ -688,15 +689,15 @@ header .logo{
 }
 
 @media all and (min-width: 425px){
-    .restaurant_choice img{
+    .restaurant__nom img{
         width: 380px;
     }
-    .new{
+    .restaurant__nouveau{
         left: 75%;
         
     }
 
-    .cout, h4, p{
+    .composition__menu, h4, p{
         max-width: 300px;
     }
 
@@ -708,11 +709,11 @@ header .logo{
         height: auto;
     }
 
-    .fonctionnement_titre{
+    .fonctionnement__titre{
         margin: 12px;
     }
 
-    .fonctionnement_bloc
+    .fonctionnement__etape
     {
         display: flex;
         flex-direction: row;
@@ -720,7 +721,7 @@ header .logo{
         justify-content: space-between;
     }
 
-    .bloc{
+    .etape{
         width: 45%;
         margin: 10px;
     }
@@ -730,27 +731,27 @@ header .logo{
         padding-left: 12px;
     }
 
-    .cout h4, p{
+    .composition__menu h4, p{
         width: 100%;
     }
 
-    .restaurant_choice img{
+    .restaurant__nom img{
         width: 748px;
     }
 
-    .new{
+    .restaurant__nouveau{
         left: 87%;
         
     }
 
-    .footer_rubrique{
+    .footer__rubrique{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
 
-    .footer_bloc{
+    .footer__bloc{
        max-width: 35%;
         padding: 20px 12px;
     }
@@ -765,13 +766,13 @@ header .logo{
         height: 200px;
     }
 
-    .fonctionnement_bloc
+    .fonctionnement__etape
     {
         flex-wrap: nowrap;
     }
 
 
-    .choice{
+    .restaurant__choix{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
@@ -779,18 +780,18 @@ header .logo{
     }
 
 
-    .restaurant_choice
+    .restaurant__nom
     {
         max-width: 47%;
         margin: 10px;
 
     }
 
-    .restaurant_choice img{
+    .restaurant__nom img{
         height: 175px;
     }
 
-    .new{
+    .restaurant__nouveau{
         left: 80%;
         
     }
@@ -803,11 +804,11 @@ header .logo{
         height: 400px;
     }
     
-    .parcourir{
-        width: 30%;
+    .composition__parcourir_1, .composition__parcourir_2{
+        width: 32%;
     }
 
-    .cout h4, p{
+    .composition__menu h4, p{
         max-width: 220px;
     }
 
@@ -821,17 +822,12 @@ header .logo{
 
 @media all and (min-width:1440px)
 {
-    .new{
+    .restaurant__nouveau{
         left: 85%;
         
     }
-    .parcourir_1{
-        width: 450px;
-
-    }
-
-    .parcourir_2{
-        width: 450px;
+   .composition__menu h4, p{
+        max-width: 400px;
     }
 
 }
