@@ -205,14 +205,26 @@ a {
   position: relative;
 }
 
+h1 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 25px;
+}
+
 h2, h3, h4, p {
   font-family: roboto, sans-serif;
   color: black;
 }
 
 h2 {
-  font-size: 30px;
-  color: black;
+  font-weight: bold;
+}
+
+h3, h4 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 100;
 }
 
 .icone {
@@ -228,6 +240,7 @@ h2 {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   box-shadow: 3px 3px 3px #f5efef;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .bouton:hover {
@@ -265,8 +278,10 @@ header .logo {
   padding: 45px 20px 55px 20px;
 }
 
-.choix h3 {
+.choix p {
   padding: 20px 0 35px 0;
+  white-space: normal;
+  max-width: 100%;
 }
 
 .fonctionnement {
@@ -390,6 +405,7 @@ header .logo {
 .favoris {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .favoris i {
@@ -426,7 +442,7 @@ header .logo {
   padding: 10px 0;
 }
 
-.footer h2 {
+.footer h1 {
   color: #fff;
 }
 
