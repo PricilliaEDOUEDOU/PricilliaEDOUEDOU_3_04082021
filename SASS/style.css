@@ -1,49 +1,6 @@
 @charset "UTF-8";
-.delai_0 {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.delai_1 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-
-.delai_2 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.delai_3 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.delai_4 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.delai_5 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.delai_6 {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-.delai_7 {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-.delai_8 {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
+/*couleurs*/
+/*breakpoints*/
 /*animation loader spinner*/
 @-webkit-keyframes loader {
   15% {
@@ -470,7 +427,6 @@ header .logo {
   vertical-align: middle;
   line-height: 50px;
   text-align: center;
-  webkit-box-shadow: 0px 3px 3px #73737338 inset;
   box-shadow: 0px 3px 3px #73737338 inset;
 }
 .localisation p {
@@ -723,6 +679,11 @@ header .logo {
   z-index: 1;
   position: relative;
   margin-top: -64px;
+}
+.menu h2 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 25px;
+  padding-left: 0;
 }
 
 .composition {

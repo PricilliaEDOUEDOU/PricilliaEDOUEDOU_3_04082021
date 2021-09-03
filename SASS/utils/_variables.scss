@@ -1,16 +1,12 @@
+/*couleurs*/
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $quaternaire:#f6f6f6;
 $quinquenaire: #fff;
 
-@for$i from 0 through 8 {
-    .delai_#{$i} {
-        animation-delay: ($i * 0.1s);
-    }
-}
 
-
+/*breakpoints*/
 $breakpoints:(
     smartphone_m: 375px,
     mobile_l: 425px,
