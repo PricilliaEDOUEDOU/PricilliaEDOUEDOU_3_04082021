@@ -1,0 +1,203 @@
+
+.localisation{
+    @include dispotion_principale;
+    height: 50px;
+    background-color: #eaeaea;
+    padding: 15px 0;
+    vertical-align: middle;
+    line-height: 50px;
+    text-align: center;
+    webkit-box-shadow: 0px 3px 3px #73737338 inset;
+    box-shadow: 0px 3px 3px #73737338 inset;
+    p{
+        font-weight: bold;
+    }
+}
+
+.explorer{
+    text-align: center;
+    background-color: $quaternaire; 
+    padding: 45px 20px 55px 20px;
+    p{
+        padding: 20px 0 35px 0;
+        white-space: normal;
+        max-width: 100%;
+    }  
+}
+
+
+.fonctionnement{
+    background-color: $quinquenaire;
+    height: 440px;
+    padding: 50px 20px 0 20px;
+    @include tablet{
+        height: auto;
+    }
+    @include laptop{
+        height: 200px;
+    }
+    .fonctionnement__titre{
+        padding: 0;
+        @include tablet{
+            padding: 12px;
+        }
+    }
+}
+
+.fonctionnement__etape{
+    height: 275px; 
+    @include tablet{
+        @include dispotion_horizontale;
+    }   
+    @include  laptop{
+        flex-wrap: nowrap;
+    }
+}
+
+.etape{
+    @include dispotion_principale;
+    height: 80px;
+    background-color: $quaternaire;
+    justify-content: flex-start;
+    border-radius: 20px 20px 20px 20px;
+    border: solid 1px $quinquenaire;
+    margin: 20px 0;
+    position: relative;
+    @include tablet{
+        width: 45%;
+        margin: 10px;
+    }
+    /*modification de la couleur au survol des éléments du fonctionnement*/
+    &:hover{
+        background:lighten($primaire, 35%);
+        .fas{
+            color: $primaire;
+
+        }
+    }
+
+}
+
+.etape__nombre
+{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background-color: $primaire;
+    border-radius: 50%;
+    color: $quinquenaire;
+    line-height: 25px;
+    right: 10px;
+    margin: 30px 0;
+}
+
+
+.fa-mobile-alt, .fa-list, .fa-store{
+    position: relative;
+    right: 5px;
+    margin: 30px 10px;
+
+}
+
+.restaurant{
+    background-color: $quaternaire;
+    padding: 60px 20px 65px 20px;
+}
+
+.restaurant__choix{
+    @include disposition_column;
+    @include laptop{
+        @include dispotion_horizontale;
+    }
+    
+}
+
+.restaurant__nom{
+    @include dispotion_principale;
+    flex-direction: column;
+    border-radius: 20px 20px 20px 20px;
+    border: solid 3px #f5efef;
+    margin: 18px 0;
+    box-shadow: 20px 20px 20px 20px #f5efef;
+    position: relative;
+    @include laptop{
+        max-width: 47%;
+        margin: 10px;
+    }
+    img{
+        width: 335px;
+        object-fit: cover;
+        height: 175px;
+        border-radius: 20px 20px 0 0;
+        @include mobile_l{
+            width: 380px;
+        }
+        @include tablet{
+            width: 748px;
+        }
+        @include laptop{
+            height: 175px;
+        }
+
+    }
+}
+
+.restaurant__nouveau{
+    background-color: $tertiaire;
+    color: #2c9c81;
+    padding: 4px 10px;
+    border-radius: 2px;
+    position: absolute;
+    left: 65%;
+    top: 5%;
+    @include smartphone_m{
+        left: 70%;
+    }
+    @include mobile_l{
+        left: 75%;
+    }
+    @include tablet {
+        left: 87%;
+    }
+    @include laptop{
+        left: 80%;
+    }
+    @include laptop_l{
+        left: 85%;
+    }
+}
+
+.restaurant__info{
+    background: $quinquenaire;
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 0 0 20px 20px;
+    p {
+        padding-top: 15px;
+    }
+}
+
+.restaurant__appreciation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i{
+        font-size: 20px;
+    }
+}
+
+/*Remplissage du coeur*/
+.coeur {
+    cursor: pointer;
+    &:hover {
+      animation: fill 0.3s ease-in-out;
+      display: inline-block;
+      opacity: 1;
+      background:linear-gradient(to top left, $primaire, $secondaire);
+      background:-webkit-linear-gradient(to top left, $primaire, $secondaire);
+      -webkit-background-clip: text;
+      color: transparent; 
+      font-weight: bold;
+    }
+}

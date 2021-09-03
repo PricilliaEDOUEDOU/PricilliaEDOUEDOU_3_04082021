@@ -386,9 +386,6 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
 }
 
 .loader {
@@ -467,14 +464,17 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*display: flex;
-  justify-content: center;*/
   height: 50px;
   background-color: #eaeaea;
   padding: 15px 0;
   vertical-align: middle;
   line-height: 50px;
   text-align: center;
+  webkit-box-shadow: 0px 3px 3px #73737338 inset;
+  box-shadow: 0px 3px 3px #73737338 inset;
+}
+.localisation p {
+  font-weight: bold;
 }
 
 .explorer {
@@ -530,9 +530,6 @@ header .logo {
 }
 
 .etape {
-  /* display: flex;
-   /*justify-content: space-between;*
-   align-items: center;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -543,6 +540,7 @@ header .logo {
   border: solid 1px #fff;
   margin: 20px 0;
   position: relative;
+  /*modification de la couleur au survol des éléments du fonctionnement*/
 }
 @media all and (min-width: 768px) {
   .etape {
@@ -583,13 +581,15 @@ header .logo {
 
 .restaurant__choix {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 @media all and (min-width: 1024px) {
   .restaurant__choix {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -597,9 +597,6 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* display: flex;
-   align-items: center;
-   justify-content: space-between;*/
   flex-direction: column;
   border-radius: 20px 20px 20px 20px;
   border: solid 3px #f5efef;
@@ -686,7 +683,6 @@ header .logo {
   justify-content: space-between;
   align-items: center;
 }
-
 .restaurant__appreciation i {
   font-size: 20px;
 }
@@ -708,6 +704,7 @@ header .logo {
 }
 
 /*Pages de menu*/
+/*Flèche précédent située au niveu du header*/
 .before {
   position: absolute;
   left: 10px;
@@ -730,21 +727,23 @@ header .logo {
 
 .composition {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 @media all and (min-width: 1024px) {
   .composition {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     height: 400px;
   }
 }
 
 .composition__parcourir_1 {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
   height: 370px;
   padding: 20px 0;
   border-bottom: #99E2D0;
@@ -758,8 +757,8 @@ header .logo {
 
 .composition__parcourir_2 {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
   height: 290px;
   padding: 20px 0;
 }
@@ -798,7 +797,6 @@ header .logo {
   background: #fff;
   border-radius: 20px;
   cursor: pointer;
-  /*box-shadow: 0 5px 15px 0 #c3c3c3;*/
   box-shadow: 20px 20px 20px 20px #f5efef;
   flex: 1 0 33%;
   overflow: hidden;
@@ -912,6 +910,7 @@ header .logo {
   padding: 10px;
 }
 
+/*Rognage du texte avec les points de suspension*/
 .composition__menu, h4, p {
   overflow: hidden;
   text-overflow: ellipsis;
