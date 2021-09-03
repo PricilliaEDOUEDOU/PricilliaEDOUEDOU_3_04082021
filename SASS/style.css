@@ -1,4 +1,245 @@
 @charset "UTF-8";
+.delai_0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.delai_1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.delai_2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delai_3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delai_4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delai_5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delai_6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delai_7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delai_8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+/*animation loader spinner*/
+@-webkit-keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(230px);
+  }
+  65% {
+    transform: translateX(230px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(230px);
+  }
+  65% {
+    transform: translateX(230px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes loading-text {
+  0% {
+    content: "ohmyfood";
+  }
+  25% {
+    content: "ohmyfood.";
+  }
+  50% {
+    content: "ohmyfood..";
+  }
+  75% {
+    content: "ohmyfood...";
+  }
+}
+@keyframes loading-text {
+  0% {
+    content: "ohmyfood";
+  }
+  25% {
+    content: "ohmyfood.";
+  }
+  50% {
+    content: "ohmyfood..";
+  }
+  75% {
+    content: "ohmyfood...";
+  }
+}
+@-webkit-keyframes container {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes container {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+/*animation "nouveau" clignotant*/
+.clignote {
+  -webkit-animation: clignote 0.5s linear infinite;
+          animation: clignote 0.5s linear infinite;
+}
+
+@-webkit-keyframes clignote {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes clignote {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*animation apparition des plats*/
+@-webkit-keyframes apparence {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes apparence {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*Animation du checkbox */
+@-webkit-keyframes coche {
+  0% {
+    transform: translate(50px, 0);
+  }
+  20% {
+    transform: translate(30px, 0);
+  }
+  40% {
+    transform: translate(20px, 0);
+  }
+  60% {
+    transform: translate(15px, 0);
+  }
+  80% {
+    transform: translate(7px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@keyframes coche {
+  0% {
+    transform: translate(50px, 0);
+  }
+  20% {
+    transform: translate(30px, 0);
+  }
+  40% {
+    transform: translate(20px, 0);
+  }
+  60% {
+    transform: translate(15px, 0);
+  }
+  80% {
+    transform: translate(7px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@-webkit-keyframes coche-contain {
+  0% {
+    transform: translate(50px, 0);
+  }
+  40% {
+    transform: translate(25px, 0);
+  }
+  70% {
+    transform: translate(12px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@keyframes coche-contain {
+  0% {
+    transform: translate(50px, 0);
+  }
+  40% {
+    transform: translate(25px, 0);
+  }
+  70% {
+    transform: translate(12px, 0);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +247,10 @@
 
 body {
   width: 100%;
-  display: flex;
+  /*@include dispotion_principale;*/
   align-items: center;
-  justify-content: center;
-  /*align-items: center;
   display: flex;
-  justify-content: center;*/
+  justify-content: center;
 }
 
 a {
@@ -23,6 +262,10 @@ img {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.wrapper {
+  margin: 0 auto;
 }
 
 h1 {
@@ -37,6 +280,7 @@ h2, h3, h4, p {
 
 h2 {
   font-weight: bold;
+  padding-left: 12px;
 }
 
 h3, h4 {
@@ -49,6 +293,79 @@ p {
 
 .icone {
   color: black;
+}
+
+.bouton {
+  width: 210px;
+  height: 50px;
+  border-radius: 50px 50px 50px 50px;
+  border: 1px solid;
+  color: #fff;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  box-shadow: 3px 3px 3px #f5efef;
+  cursor: pointer;
+  font-weight: bold;
+}
+.bouton:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: #e1d0d0 4px 4px 6px;
+}
+
+header {
+  height: 62px;
+  padding: 30px 0 20px 0;
+  align-items: center;
+}
+
+header .logo {
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.logo {
+  font-family: Shrikhand, sans-serif;
+  position: relative;
+}
+
+.footer {
+  padding: 25px 20px 40px 20px;
+}
+.footer .logo {
+  padding-left: 0;
+}
+@media all and (min-width: 768px) {
+  .footer .logo {
+    padding-left: 12px;
+  }
+}
+
+/*structure conditionnelle texte en blanc dans le footer*/
+.footer, footer p, footer a {
+  color: #fff;
+  background-color: #353535;
+}
+
+.footer__rubrique {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media all and (min-width: 768px) {
+  .footer__rubrique {
+    flex-direction: row;
+  }
+}
+
+.footer__bloc {
+  padding: 10px 0;
+}
+@media all and (min-width: 768px) {
+  .footer__bloc {
+    max-width: 35%;
+    padding: 20px 12px;
+  }
 }
 
 /*loader spinner*/
@@ -131,7 +448,6 @@ p {
   right: 0;
   margin: auto;
   background: linear-gradient(to left, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 15px;
@@ -145,125 +461,6 @@ p {
           animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes loader {
-  15% {
-    transform: translateX(0);
-  }
-  45% {
-    transform: translateX(230px);
-  }
-  65% {
-    transform: translateX(230px);
-  }
-  95% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes loader {
-  15% {
-    transform: translateX(0);
-  }
-  45% {
-    transform: translateX(230px);
-  }
-  65% {
-    transform: translateX(230px);
-  }
-  95% {
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes loading-text {
-  0% {
-    content: "ohmyfood";
-  }
-  25% {
-    content: "ohmyfood.";
-  }
-  50% {
-    content: "ohmyfood..";
-  }
-  75% {
-    content: "ohmyfood...";
-  }
-}
-@keyframes loading-text {
-  0% {
-    content: "ohmyfood";
-  }
-  25% {
-    content: "ohmyfood.";
-  }
-  50% {
-    content: "ohmyfood..";
-  }
-  75% {
-    content: "ohmyfood...";
-  }
-}
-@-webkit-keyframes container {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-@keyframes container {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-.wrapper {
-  margin: 0 auto;
-}
-
-header {
-  height: 62px;
-  padding: 30px 0 20px 0;
-  align-items: center;
-}
-
-header .logo {
-  text-align: center;
-  line-height: 50px;
-  vertical-align: middle;
-}
-
-.logo {
-  font-family: Shrikhand, sans-serif;
-  position: relative;
-}
-
-.bouton {
-  width: 210px;
-  height: 50px;
-  border-radius: 50px 50px 50px 50px;
-  border: 1px solid;
-  color: #fff;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  box-shadow: 3px 3px 3px #f5efef;
-  cursor: pointer;
-  font-weight: bold;
-}
-.bouton:hover {
-  background-color: #ae80e5;
-  background-blend-mode: lighten;
-  box-shadow: #e1d0d0 4px 4px 6px;
 }
 
 .localisation {
@@ -405,9 +602,9 @@ header .logo {
    justify-content: space-between;*/
   flex-direction: column;
   border-radius: 20px 20px 20px 20px;
-  border: solid 3px #f6f6f6;
+  border: solid 3px #f5efef;
   margin: 18px 0;
-  box-shadow: 10px 10px 10px 10px #f6f6f6;
+  box-shadow: 20px 20px 20px 20px #f5efef;
   position: relative;
 }
 @media all and (min-width: 1024px) {
@@ -474,29 +671,6 @@ header .logo {
   }
 }
 
-/*animation "nouveau qui clignote*/
-.clignote {
-  -webkit-animation: clignote 0.5s linear infinite;
-          animation: clignote 0.5s linear infinite;
-}
-
-@-webkit-keyframes clignote {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes clignote {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .restaurant__info {
   background: #fff;
   max-width: 100%;
@@ -528,49 +702,9 @@ header .logo {
   opacity: 1;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   background: -webkit-linear-gradient(to top left, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
-}
-
-.footer {
-  padding: 25px 20px 40px 20px;
-}
-.footer .logo {
-  padding-left: 0;
-}
-@media all and (min-width: 768px) {
-  .footer .logo {
-    padding-left: 12px;
-  }
-}
-
-/*structure conditionnelle ptexte en blanc dans le footer*/
-.footer, footer p, footer a {
-  color: #fff;
-  background-color: #353535;
-}
-
-.footer__rubrique {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-@media all and (min-width: 768px) {
-  .footer__rubrique {
-    flex-direction: row;
-  }
-}
-
-.footer__bloc {
-  padding: 10px 0;
-}
-@media all and (min-width: 768px) {
-  .footer__bloc {
-    max-width: 35%;
-    padding: 20px 12px;
-  }
 }
 
 /*Pages de menu*/
@@ -664,16 +798,14 @@ header .logo {
   background: #fff;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0 5px 15px 0 #c3c3c3;
+  /*box-shadow: 0 5px 15px 0 #c3c3c3;*/
+  box-shadow: 20px 20px 20px 20px #f5efef;
   flex: 1 0 33%;
   overflow: hidden;
   max-width: 100%;
   max-height: 70px;
   -webkit-animation: apparence 0.5s;
           animation: apparence 0.5s;
-}
-.composition__choix:hover {
-  box-shadow: 0 5px 15px 0 #9d9d9d;
 }
 .composition__choix:hover .composition__menu--price {
   -webkit-animation: coche-contain ease 0.3s;
@@ -707,176 +839,6 @@ header .logo {
           animation: valide ease 0.5s 1;
 }
 
-.composition__menu--price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  padding: 10px;
-  text-align: right;
-  font-weight: bold;
-}
-
-.composition__menu--coche {
-  display: none;
-  width: 30%;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.fa-check-circle {
-  font-size: 24px;
-  color: #fff;
-  /*transform: rotate(360deg);*/
-}
-
-.composition__menu, h4, p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 218px;
-}
-@media all and (min-width: 375px) {
-  .composition__menu, h4, p {
-    max-width: 260px;
-  }
-}
-@media all and (min-width: 425px) {
-  .composition__menu, h4, p {
-    max-width: 300px;
-  }
-}
-@media all and (min-width: 768px) {
-  .composition__menu, h4, p {
-    width: 100%;
-  }
-}
-@media all and (min-width: 1024px) {
-  .composition__menu, h4, p {
-    max-width: 220px;
-  }
-}
-@media all and (min-width: 1440px) {
-  .composition__menu, h4, p {
-    max-width: 400px;
-  }
-}
-
-.composition__menu {
-  width: 80%;
-  padding: 10px;
-}
-
-/*Animation de l'icone validation */
-@-webkit-keyframes valide {
-  0% {
-    transform: rotade(-90deg);
-  }
-  20% {
-    transform: rotade(-75deg) scale(1.03);
-  }
-  40% {
-    transform: rotade(-60deg) scale(1.08);
-  }
-  60% {
-    transform: rotate(-45deg) scale(1.15);
-  }
-  80% {
-    transform: rotade(-30deg) scale(1.08);
-  }
-  100% {
-    transform: rotate(5deg) scale(1);
-  }
-}
-@keyframes valide {
-  0% {
-    transform: rotade(-90deg);
-  }
-  20% {
-    transform: rotade(-75deg) scale(1.03);
-  }
-  40% {
-    transform: rotade(-60deg) scale(1.08);
-  }
-  60% {
-    transform: rotate(-45deg) scale(1.15);
-  }
-  80% {
-    transform: rotade(-30deg) scale(1.08);
-  }
-  100% {
-    transform: rotate(5deg) scale(1);
-  }
-}
-/*Animation du checkbox */
-@-webkit-keyframes coche {
-  0% {
-    transform: translate(50px, 0);
-  }
-  20% {
-    transform: translate(30px, 0);
-  }
-  40% {
-    transform: translate(20px, 0);
-  }
-  60% {
-    transform: translate(15px, 0);
-  }
-  80% {
-    transform: translate(7px, 0);
-  }
-  100% {
-    transform: translate(1px, 0);
-  }
-}
-@keyframes coche {
-  0% {
-    transform: translate(50px, 0);
-  }
-  20% {
-    transform: translate(30px, 0);
-  }
-  40% {
-    transform: translate(20px, 0);
-  }
-  60% {
-    transform: translate(15px, 0);
-  }
-  80% {
-    transform: translate(7px, 0);
-  }
-  100% {
-    transform: translate(1px, 0);
-  }
-}
-@-webkit-keyframes coche-contain {
-  0% {
-    transform: translate(50px, 0);
-  }
-  40% {
-    transform: translate(25px, 0);
-  }
-  70% {
-    transform: translate(12px, 0);
-  }
-  100% {
-    transform: translate(1px, 0);
-  }
-}
-@keyframes coche-contain {
-  0% {
-    transform: translate(50px, 0);
-  }
-  40% {
-    transform: translate(25px, 0);
-  }
-  70% {
-    transform: translate(12px, 0);
-  }
-  100% {
-    transform: translate(1px, 0);
-  }
-}
 /*Boucle pour l'apparition des plats avec un léger décalage*/
 .delai_0 {
   -webkit-animation-delay: 0s;
@@ -923,20 +885,61 @@ header .logo {
           animation-delay: 0.8s;
 }
 
-@-webkit-keyframes apparence {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+.composition__menu--price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: right;
+  font-weight: bold;
 }
 
-@keyframes apparence {
-  0% {
-    transform: scale(0);
+.composition__menu--coche {
+  display: none;
+  width: 30%;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.fa-check-circle {
+  font-size: 24px;
+  color: #fff;
+}
+
+.composition__menu {
+  width: 80%;
+  padding: 10px;
+}
+
+.composition__menu, h4, p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 218px;
+}
+@media all and (min-width: 375px) {
+  .composition__menu, h4, p {
+    max-width: 260px;
   }
-  100% {
-    transform: scale(1);
+}
+@media all and (min-width: 425px) {
+  .composition__menu, h4, p {
+    max-width: 300px;
+  }
+}
+@media all and (min-width: 768px) {
+  .composition__menu, h4, p {
+    width: 100%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .composition__menu, h4, p {
+    max-width: 220px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .composition__menu, h4, p {
+    max-width: 400px;
   }
 }/*# sourceMappingURL=style.css.map */
