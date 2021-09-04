@@ -1,0 +1,16 @@
+/*couleurs*/
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$quaternaire:#f6f6f6;
+$quinquenaire: #fff;
+
+
+/*breakpoints*/
+$breakpoints:(
+    smartphone_m: 375px,
+    mobile_l: 425px,
+    tablet: 768px,
+    laptop: 1024px,
+    laptop_l: 1440px
+);

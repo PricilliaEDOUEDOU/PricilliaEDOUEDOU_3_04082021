@@ -1,0 +1,41 @@
+.footer{
+    padding: 25px 20px 40px 20px;
+    .logo{
+        padding-left: 0;
+        @include tablet{
+            padding-left: 12px;
+        }
+    }
+} 
+
+/*structure conditionnelle texte en blanc dans le footer*/
+
+@if(lightness(#353535) > 25%) {
+    .footer, footer p, footer a{
+        color: #353535;
+        background-color: #353535;
+    }
+}@else{
+    .footer, footer p, footer a{
+        color: $quinquenaire;
+        background-color: #353535;
+    }
+}
+.footer__rubrique{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row; 
+    }
+
+}
+
+.footer__bloc
+{
+    padding: 10px 0;
+    @include tablet{
+        max-width: 35%;
+        padding: 20px 12px;
+    }
+}

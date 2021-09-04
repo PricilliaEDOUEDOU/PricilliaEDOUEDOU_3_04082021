@@ -1,0 +1,27 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    /*@include dispotion_principale;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.wrapper{
+    margin: 0 auto;
+}

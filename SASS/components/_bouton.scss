@@ -1,0 +1,17 @@
+.bouton{
+    width: 210px;
+    height: 50px;
+    border-radius: 50px 50px 50px 50px;
+    border: 1px solid;
+    color: $quinquenaire;
+    background: linear-gradient(to top left, $primaire, $secondaire); 
+    box-shadow: 3px 3px 3px #f5efef;
+    cursor: pointer;
+    font-weight: bold;
+    &:hover{
+        background-color: lighten($primaire, 10%);
+        background-blend-mode: lighten;
+        box-shadow: darken(#f5efef, 10%) 4px 4px 6px;
+
+    }
+}

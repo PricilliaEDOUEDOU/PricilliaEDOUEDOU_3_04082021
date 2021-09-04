@@ -1,0 +1,110 @@
+
+/*animation loader spinner*/
+
+@keyframes loader {
+    15% {
+      transform: translateX(0);
+    }
+    45% {
+      transform: translateX(230px);
+    }
+    65% {
+      transform: translateX(230px);
+    }
+    95% {
+      transform: translateX(0);
+    }
+}
+@keyframes loading-text {
+    0% {
+      content: "ohmyfood";
+    }
+    25% {
+      content: "ohmyfood.";
+    }
+    50% {
+      content: "ohmyfood..";
+    }
+    75% {
+      content: "ohmyfood...";
+    }
+}
+@keyframes container {
+   
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+/*animation "nouveau" clignotant*/
+.clignote {
+    animation: clignote 0.5s linear infinite;
+  }
+
+@keyframes clignote{
+
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+
+
+/*animation apparition des plats*/
+@keyframes apparence{
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+  /*Animation du checkbox */
+@keyframes coche {
+    0% {
+      transform: translate(50px, 0);
+    }
+    20% {
+      transform: translate(30px, 0);
+    }
+    40% {
+      transform: translate(20px, 0);
+    }
+    60% {
+      transform: translate(15px, 0);
+    }
+    80% {
+      transform: translate(7px, 0);
+    }
+    100% {
+      transform: translate(1px, 0);
+    }
+  }
+  @keyframes coche-contain {
+    0% {
+      transform: translate(50px, 0);
+    }
+    40% {
+      transform: translate(25px, 0);
+    }
+    70% {
+      transform: translate(12px, 0);
+    }
+    100% {
+      transform: translate(1px, 0);
+    }
+  }
+
