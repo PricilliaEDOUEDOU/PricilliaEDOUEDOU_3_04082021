@@ -12,7 +12,7 @@
   65% {
     transform: translateX(230px);
   }
-  95% {
+  100% {
     transform: translateX(0);
   }
 }
@@ -26,7 +26,7 @@
   65% {
     transform: translateX(230px);
   }
-  95% {
+  100% {
     transform: translateX(0);
   }
 }
@@ -67,7 +67,7 @@
   }
   100% {
     opacity: 0;
-    z-index: -10;
+    z-index: -1;
   }
 }
 @keyframes container {
@@ -79,7 +79,7 @@
   }
   100% {
     opacity: 0;
-    z-index: -10;
+    z-index: -1;
   }
 }
 /*animation "nouveau" clignotant*/
@@ -131,70 +131,70 @@
 /*Animation du checkbox */
 @-webkit-keyframes coche {
   0% {
-    transform: translate(50px, 0);
+    transform: translateX(50px);
   }
   20% {
-    transform: translate(30px, 0);
+    transform: translateX(30px);
   }
   40% {
-    transform: translate(20px, 0);
+    transform: translateX(20px);
   }
   60% {
-    transform: translate(15px, 0);
+    transform: translateX(15px);
   }
   80% {
-    transform: translate(7px, 0);
+    transform: translateX(7px);
   }
   100% {
-    transform: translate(1px, 0);
+    transform: translateX(1px);
   }
 }
 @keyframes coche {
   0% {
-    transform: translate(50px, 0);
+    transform: translateX(50px);
   }
   20% {
-    transform: translate(30px, 0);
+    transform: translateX(30px);
   }
   40% {
-    transform: translate(20px, 0);
+    transform: translateX(20px);
   }
   60% {
-    transform: translate(15px, 0);
+    transform: translateX(15px);
   }
   80% {
-    transform: translate(7px, 0);
+    transform: translateX(7px);
   }
   100% {
-    transform: translate(1px, 0);
+    transform: translateX(1px);
   }
 }
 @-webkit-keyframes coche-contain {
   0% {
-    transform: translate(50px, 0);
+    transform: translateX(50px);
   }
   40% {
-    transform: translate(25px, 0);
+    transform: translateX(25px);
   }
   70% {
-    transform: translate(12px, 0);
+    transform: translateX(12px);
   }
   100% {
-    transform: translate(1px, 0);
+    transform: translateX(1px);
   }
 }
 @keyframes coche-contain {
   0% {
-    transform: translate(50px, 0);
+    transform: translateX(50px);
   }
   40% {
-    transform: translate(25px, 0);
+    transform: translateX(25px);
   }
   70% {
-    transform: translate(12px, 0);
+    transform: translateX(12px);
   }
   100% {
-    transform: translate(1px, 0);
+    transform: translateX(1px);
   }
 }
 * {
@@ -333,13 +333,13 @@ header .logo {
   left: 0;
   top: 0;
   background-color: #fff;
-  -webkit-animation: container 2.5s;
-          animation: container 2.5s;
+  -webkit-animation: container 3s;
+          animation: container 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
-  z-index: 10000;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,7 +651,6 @@ header .logo {
   -webkit-animation: fill 0.3s ease-in-out;
           animation: fill 0.3s ease-in-out;
   display: inline-block;
-  opacity: 1;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   background: -webkit-linear-gradient(to top left, #9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -676,7 +675,6 @@ header .logo {
   background-color: #f6f6f6;
   padding: 40px 10px 0 10px;
   border-radius: 30px 30px 0 0;
-  z-index: 1;
   position: relative;
   margin-top: -64px;
 }
@@ -763,8 +761,8 @@ header .logo {
   overflow: hidden;
   max-width: 100%;
   max-height: 70px;
-  -webkit-animation: apparence 0.5s;
-          animation: apparence 0.5s;
+  -webkit-animation: apparence both 0.5s;
+          animation: apparence both 0.5s;
 }
 .composition__choix:hover .composition__menu--price {
   -webkit-animation: coche-contain ease 0.3s;

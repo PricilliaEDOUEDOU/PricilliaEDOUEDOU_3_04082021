@@ -16,7 +16,6 @@
     background-color: $quaternaire;
     padding: 40px 10px 0 10px; 
     border-radius: 30px 30px 0 0;
-    z-index: 1;
     position: relative;
     margin-top: -64px;
     h2{
@@ -29,7 +28,7 @@
 .composition{
     @include disposition_column;
     @include laptop{
-        @include dispotion_horizontale;
+    @include dispotion_horizontale;
         height: 400px;
     }
 }
@@ -87,7 +86,8 @@
     overflow: hidden;
     max-width: 100%;
     max-height: 70px;
-    animation: apparence 0.5s;
+    animation: apparence both 0.5s;
+
     &:hover{
         .composition__menu--price{
             animation: coche-contain ease 0.3s;

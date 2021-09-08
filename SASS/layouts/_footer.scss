@@ -13,7 +13,7 @@
 @if(lightness(#353535) > 25%) {
     .footer, footer p, footer a{
         color: #353535;
-        background-color: #353535;
+        background-color: $quinquenaire;
     }
 }@else{
     .footer, footer p, footer a{

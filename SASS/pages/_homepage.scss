@@ -192,7 +192,6 @@
     &:hover {
       animation: fill 0.3s ease-in-out;
       display: inline-block;
-      opacity: 1;
       background:linear-gradient(to top left, $primaire, $secondaire);
       background:-webkit-linear-gradient(to top left, $primaire, $secondaire);
       -webkit-background-clip: text;

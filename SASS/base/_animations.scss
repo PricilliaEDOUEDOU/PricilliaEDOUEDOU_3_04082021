@@ -11,7 +11,7 @@
     65% {
       transform: translateX(230px);
     }
-    95% {
+    100% {
       transform: translateX(0);
     }
 }
@@ -39,7 +39,7 @@
     }
     100%{
         opacity: 0;
-        z-index: -10;
+        z-index: -1;
     }
 }
 
@@ -75,36 +75,36 @@
   /*Animation du checkbox */
 @keyframes coche {
     0% {
-      transform: translate(50px, 0);
+      transform: translateX(50px);
     }
     20% {
-      transform: translate(30px, 0);
+      transform: translateX(30px);
     }
     40% {
-      transform: translate(20px, 0);
+      transform: translateX(20px);
     }
     60% {
-      transform: translate(15px, 0);
+      transform: translateX(15px);
     }
     80% {
-      transform: translate(7px, 0);
+      transform: translateX(7px);
     }
     100% {
-      transform: translate(1px, 0);
+      transform: translateX(1px);
     }
   }
   @keyframes coche-contain {
     0% {
-      transform: translate(50px, 0);
+      transform: translateX(50px);
     }
     40% {
-      transform: translate(25px, 0);
+      transform: translateX(25px);
     }
     70% {
-      transform: translate(12px, 0);
+      transform: translateX(12px);
     }
     100% {
-      transform: translate(1px, 0);
+      transform: translateX(1px);
     }
   }
 
